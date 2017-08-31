@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby #SHEBANG LINE = tells shell which interpreter to use to run the file
+
+require "bundler/setup" #ensures bundler is used to install the gems
+require "presidents"  #loads the application
+require "irb"     #Interactive Ruby = REPL execution environment
+
+IRB.start       #starts Interactive Ruby
