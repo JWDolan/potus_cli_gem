@@ -1,3 +1,3 @@
-#!/usr/bin/env ruby   #SHEBANG LINE
+#!/usr/bin/env ruby   
 require_relative '../lib/presidents'	#loads the application
 Presidents::CLI.new.call	#creates a new CLI instance and executes the call method on that instance

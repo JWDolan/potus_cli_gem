@@ -5,6 +5,6 @@ set -euo pipefail
 #set -u => exit if variable is undefined
 #set -o pitfall => return value of pipeline = last command to exit w/ a non-zero status
 
-IFS=$’\n\t' #internal field operator = character list used to split words and lines into words (w/ read command)
+IFS=$'\n\t' #internal field operator = character list used to split words and lines into words (w/ read command)
 
 bundle install	#sets up Ruby dependencies
