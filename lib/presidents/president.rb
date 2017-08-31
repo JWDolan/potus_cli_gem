@@ -15,4 +15,12 @@ class Presidents::President #gives Presidents module access to the President cla
     @url = url    #sets url argument to an instance variable
     @@all << self   #shovel operator adds the instance to the @@all array
   end
+
+  def self.all  #returns all instances of the President class
+    @@all  #returns an array of President instances
+  end
+
+  def self.find(id) #accepts an argument and finds the instance with index = argument - 1
+    self.all[id - 1]
+  end
 end
