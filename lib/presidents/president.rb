@@ -23,4 +23,24 @@ class Presidents::President #gives Presidents module access to the President cla
   def self.find(id) #accepts an argument and finds the instance with index = argument - 1
     self.all[id - 1]
   end
+
+
+  #||= assigns AND returns the value of the instance variable
+  #.xpath accepts a selector as an argument and retrieves all matching elements; .text converts them to text
+  #SELECTORS: td = table data cell, dl = description list, dt = description term, p = paragraph
+  def documents
+    @documents ||= doc.xpath("//td/dl[4]/dt").text
+  end
+
+  def salary
+    @salary ||= doc.xpath("//td/p[5]").text
+  end
+
+  def vp
+    @vp ||= doc.xpath("//td/p[6]").text
+  end
+
+  def doc
+    @doc ||= Nokogiri::HTML(open(self.url))
+  end
 end
