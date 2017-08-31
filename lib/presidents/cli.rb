@@ -7,4 +7,25 @@ class Presidents::CLI #gives Presidents module access to the methods of the CLI 
   puts ""   #displays blank space and makes a new line
   start
  end
+
+ def start
+  print_presidents #calls the print_presidents method, displaying the list of presidents
+  puts ""    #displays blank space and makes a new line
+  puts "Which president would you like more information on?" #prompts user
+  input = gets.strip
+  #gets method retrieves the text that was last typed in
+  #.strip removes new lines and whitespace; return value is set to a variable (input)
+  president = Presidents::President.find(input.to_i)
+  #input is converted to an integer by .to_i and passed as an argument to .find
+  #.find retrieves and returns the requested President object and sets it equal to a variable (president)
+  print_president(president) #displays the requested president
+  puts "Would you like to see another president? Enter Y or N" #prompts user
+  input = gets.strip.downcase #downcase converts uppercase to lowercase
+  if input == "y"
+   start
+  else
+   puts "Thank you! Have a nice day!" #displays farewell if the user answered "N"
+   exit #exits the application
+  end
+ end
 end
