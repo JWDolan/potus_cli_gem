@@ -28,4 +28,18 @@ class Presidents::CLI #gives Presidents module access to the methods of the CLI 
    exit #exits the application
   end
  end
+ def print_president(president)
+   puts "----------- #{president.name} -----------"    #interpolates name attribute
+   puts "Historical Documents: #{president.documents}" #..documents attribute
+   puts "#{president.salary}"             #..salary attribute
+   puts "#{president.vp}"                #..vp attribute
+   puts ""  #displays blank space and starts a new line
+ end
+
+ def print_presidents
+   #iterates over the @@all array and passes two arguments into the block
+   Presidents::President.all.each_with_index do |president, index| #
+     puts "#{index + 1}. #{president.name}" #displays each president by index number (+1)
+   end
+ end
 end
