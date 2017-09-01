@@ -1,4 +1,4 @@
-require 'nokogiri' 	#allows conversion of HTML to a NodeSet of Nokogiri::XML::Elements
+require 'nokogiri' 	#allows conversion of HTML to a NodeSet of Nokogiri::XML::Elements
 require 'open-uri' 	#allows HTTP requests
 
 #Loads the Scraper, President, and CLI classes
