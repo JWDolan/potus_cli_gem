@@ -1,14 +1,14 @@
 # potus_cli_gem
 
 # Description:
-#Provides historical information on each President of the United States
+#Provides historical information about each President of the United States
 
 
 # Install Instructions:
 #Add this line to your application's Gemfile: gem 'potus_cli_gem'
 #Then execute: $ bundle
 
-#or, install it yourself: $ gem install potus_cli_gem
+#or install it yourself: $ gem install potus_cli_gem
 
 
 # Contributing
