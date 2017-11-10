@@ -28,13 +28,17 @@ class Presidents::CLI #gives Presidents module access to the methods of the CLI 
    exit #exits the application
   end
  end
+
  def print_president(president)
    puts "----------- #{president.name} -----------"    #interpolates name attribute
-   puts "Historical Documents: #{president.documents}" #..documents attribute
-   puts "#{president.salary}"             #..salary attribute
    puts "#{president.vp}"                #..vp attribute
-   puts "Notable Events: #{president.notable_events}"          #..notable events attribute
-   puts "Points of Interest: #{president.points_of_interest}"         #..points of interest attribute
+   puts ""
+   puts "Cabinet: #{president.cabinet}"         #..cabinet attribute
+   puts ""
+   puts "Historical Documents: #{president.documents}" #..documents attribute
+   puts ""
+   puts "Notable Events: #{president.notable_events}"    #..notable events attribute
+   puts "Points of Interest: #{president.points_of_interest}" #..points of interest attribute
    puts ""  #displays blank space and starts a new line
  end
 

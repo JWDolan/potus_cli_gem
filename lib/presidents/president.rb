@@ -1,5 +1,5 @@
 class Presidents::President #gives Presidents module access to the President class
- attr_accessor :name, :url, :documents, :salary, :vp, :notable_events, :points_of_interest
+ attr_accessor :name, :url, :documents, :vp, :cabinet, :notable_events, :points_of_interest
 #defines getter,setter methods for every attribute of each President instance
  @@all = [] #sets class variable (@@all) to an empty array
 
@@ -32,12 +32,12 @@ class Presidents::President #gives Presidents module access to the President cla
     @documents ||= doc.xpath("//td/dl[4]/dt").text
   end
 
-  def salary
-    @salary ||= doc.xpath("//td/p[5]").text
-  end
-
   def vp
     @vp ||= doc.xpath("//td/p[6]").text
+  end
+
+  def cabinet
+    @cabinet ||= doc.xpath("//td/dl[1]").text
   end
 
   def notable_events
