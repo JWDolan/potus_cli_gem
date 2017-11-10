@@ -41,11 +41,11 @@ class Presidents::President #gives Presidents module access to the President cla
   end
 
   def notable_events
-    @notable_events ||= doc.xpath("//td/u[2]").text
+    @notable_events ||= doc.xpath("//td/ul[2]").text
   end
 
   def points_of_interest
-    @points_of_interest ||= doc.xpath("//td/u[3]").text
+    @points_of_interest ||= doc.xpath("//td/ul[3]").text
   end
 
   def doc
