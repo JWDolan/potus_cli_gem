@@ -33,8 +33,8 @@ class Presidents::CLI #gives Presidents module access to the methods of the CLI 
    puts "Historical Documents: #{president.documents}" #..documents attribute
    puts "#{president.salary}"             #..salary attribute
    puts "#{president.vp}"                #..vp attribute
-   puts "#{president.notable_events}"          #..notable events attribute
-   puts "#{president.points_of_interest}"         #..points of interest attribute
+   puts "Notable Events: #{president.notable_events}"          #..notable events attribute
+   puts "Points of Interest: #{president.points_of_interest}"         #..points of interest attribute
    puts ""  #displays blank space and starts a new line
  end
 
